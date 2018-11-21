@@ -11,7 +11,7 @@ body {
 
 main > div {
 	position: relative;
-	top: 10rem;
+	top: 8.5rem;
 }
 
 header {
@@ -41,6 +41,14 @@ header img{
 	font-family: "Merriweather", sans-serif;
 	text-align: center;
 	font-size: 18px;
+}
+
+#instructions {
+		text-align: center;
+}
+
+small {
+	font-family: "Merriweather", sans-serif;
 }
 
 footer {
@@ -99,7 +107,7 @@ input[type=submit]:hover {
 
 ul {
 	background-color: black;
-	width: 28em;
+	width: 27em;
 	border-radius: 1em;
 	margin: 0 auto;
 	padding: 0;
@@ -117,22 +125,35 @@ ul span {
 }
 
 ul li{
-	margin: 0 0 0 .5em;
+	margin: 0 0 0 -.75em;
 	padding:0;
 	list-style:none;
 	position:relative;
 	float:left;
 	cursor: pointer;
-	width: 5em;
-	background: #fdf549;
-	height: 10em;
+	
 }
 
-ul li:hover {
+ul li.white {
+	width: 4.75em;
+	background: #fdf549;
+	height: 10em;
+	z-index: 1;
+}
+
+ul li.black {
+	width: 2em;
+	margin-left: -.75em;
+	background: black;
+	height: 4em;
+	z-index: 2;
+}
+
+ul li.white:hover {
 	background: #fffa65;
 }
 
-ul li:active {
+ul li.white:active {
 	box-shadow: inset 1px 0 0 .5px black;
 }
 /*
@@ -142,6 +163,7 @@ li:first-child {
 
 #first {
 	border-bottom-left-radius: 0.7em;
+	margin-left: 0.5em;
 }
 #last {
 	margin-right: 0;
