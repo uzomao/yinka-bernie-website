@@ -1,0 +1,97 @@
+/* CSS RESETS */
+
+body {
+	background-color: #000000;
+	margin: 0;
+}
+
+* {
+	color: #fdf549;
+}
+
+main > div {
+	position: relative;
+	top: 12.5rem;
+}
+
+header {
+	height: 50px;
+	margin: 10px;
+}
+
+header img{
+	width: 175px;
+	float: left;
+}
+
+.fas {
+	float: right;
+	color: #fdf549;
+	font-size: 30px;
+	margin: .25em 1em 0 0;
+	cursor: pointer;
+}
+
+.fa-envelope {
+	float: none;
+}
+
+.lyrics {
+	position: relative;
+	font-family: "Merriweather", sans-serif;
+	text-align: center;
+	font-size: 22.5px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #000
+}
+
+footer > h1 {
+	text-align: center;
+}
+
+footer > h1 > a {
+	color: #fdf549;
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	text-decoration: none;
+}
+
+footer > h1 > a:hover {
+	text-decoration: line-through;
+}
+
+input {
+	outline: none;
+	border: none;
+	background: black;
+	height: 50px;
+	font-size: 25px;
+	font-family: "Oswald", sans-serif;
+	color: #fdf549;
+	float: left;
+	display: none;
+}
+
+input[type=text]{
+	border-bottom: 2px solid #fdf549;
+	width: 80%;
+	text-align: center;
+	letter-spacing: 2.5px;
+
+}
+
+input[type=submit]{
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 30px;
+}
+
+input[type=submit]:hover {
+	text-decoration: line-through;
+}
