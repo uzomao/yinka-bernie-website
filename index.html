@@ -18,10 +18,18 @@
 	<main>
 		<div>
 			<p id="lyrics" class="lyrics"></p>
+			<ul>
+				<span>BERNIE-BOARD 9000</span>
+				<li id="first" data-index=0></li>
+				<li data-index=1></li>
+				<li data-index=2></li>
+				<li data-index=3></li>
+				<li id="last" data-index=4></li>
+			</ul>
 		</div>
 
 		<!-- <embed src="oomph.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" /> -->
-		<audio id="sound" src="" type="audio/mp3"></audio>
+		<audio id="sound" src="" type="audio/mp3" onended="clearText()"></audio>
 
 	</main>
 
@@ -36,6 +44,7 @@
 	<script>
 		$(document).ready(function(){
 
+			
 			var lyrics = [
 				{text: "You don't call me no more, you don't text me no more", sound: 'music/again.mp3'},
 				{text: "Chilling on a Monday rolling up the dope", sound: 'music/mondays.mp3'},
@@ -45,19 +54,13 @@
 			];
 			var i = 0;
 
-			$('#lyrics').text(getLyric(0));
+			$('li').click(function(){
+				$('#lyrics').text(getLyric($(this)[0]['dataset'].index));
+			});
 
-			setInterval(function(){
-				$('#lyrics').text(getLyric(i)).animate({
-					opacity: 0
-				}, 6000, function(){
-					$(this).css("opacity", 1);
-					i++;
-					if(i == lyrics.length){
-						i = 0;
-					}
-				});
-			}, 6000);
+			clearText = function(){
+				$('#lyrics').text('');
+			}
 
 			$('.fa-volume-up').click(function(){
 				$(this).css('display', 'none');
@@ -97,10 +100,9 @@
 
 			$('#rsvp_form').submit(function(){
 				var email = $('#rsvp_email').val();
-				$.post('https://yinka-bernie-emails.herokuapp.com/submit/'+email, function(data){
-					console.log('success');
-				})
+				$.post('https://yinka-bernie-emails.herokuapp.com/submit/'+email);
 				event.preventDefault();
+				$('footer').html('<h1>SEE YOU AT THE SHOW!</h1>');
 			})
 
 		});

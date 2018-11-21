@@ -11,7 +11,7 @@ body {
 
 main > div {
 	position: relative;
-	top: 12.5rem;
+	top: 10rem;
 }
 
 header {
@@ -40,7 +40,7 @@ header img{
 	position: relative;
 	font-family: "Merriweather", sans-serif;
 	text-align: center;
-	font-size: 22.5px;
+	font-size: 18px;
 }
 
 footer {
@@ -52,6 +52,7 @@ footer {
 
 footer > h1 {
 	text-align: center;
+	font-family: "Oswald", sans-serif;
 }
 
 footer > h1 > a {
@@ -94,4 +95,70 @@ input[type=submit]{
 
 input[type=submit]:hover {
 	text-decoration: line-through;
+}
+
+ul {
+	background-color: black;
+	width: 28em;
+	border-radius: 1em;
+	margin: 0 auto;
+	padding: 0;
+	height: 12em;
+	box-sizing: border-box;
+	border: 1px solid #fdf549;
+}
+
+ul span {
+	display: inherit;
+	height: 1.8em;
+	border-bottom: 0.2em #fdf549 solid;
+	text-align: center;
+	font-family: "Oswald", sans-serif;
+}
+
+ul li{
+	margin: 0 0 0 .5em;
+	padding:0;
+	list-style:none;
+	position:relative;
+	float:left;
+	cursor: pointer;
+	width: 5em;
+	background: #fdf549;
+	height: 10em;
+}
+
+ul li:hover {
+	background: #fffa65;
+}
+
+ul li:active {
+	box-shadow: inset 1px 0 0 .5px black;
+}
+/*
+li:first-child {
+	border-radius: 1em;
+} not working*/
+
+#first {
+	border-bottom-left-radius: 0.7em;
+}
+#last {
+	margin-right: 0;
+	border-bottom-right-radius: 0.7em
+}
+
+@keyframes comethru {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.lyrics {
+	animation-name: comethru;
+	animation-duration: 10s;
 }
