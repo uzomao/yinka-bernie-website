@@ -307,6 +307,10 @@ li:first-child {
 		height: 100px;
 	}
 
+	input {
+		border-radius: 0;
+	}
+
 	#refresh {
 		font-size: 24px;
 	}
