@@ -13,7 +13,10 @@
 		<img src="logo.jpg" alt="Yinka Bernie Intimate Show Logo">
 		<i class="fas fa-volume-up" style="display: none"></i>
 		<i class="fas fa-volume-mute"></i>
+		<i id="lineup" class="fas fa-users"></i>
 	</header>
+
+	<p id="lineup" class="lineup-on-desktop"><a href="#" id="lineup_link">who'll be there?</a></p>
 
 	<div class="main">
 		<p id="lyrics" class="lyrics"></p>
@@ -32,6 +35,9 @@
 		<p id="instructions"><small>*press keys to play*</small></p>
 	</div>
 
+	<div class="performing">
+	</div>
+
 	<audio id="sound" src="" type="audio/mp3" onended="clearText()"></audio>
 
 	<footer>
@@ -40,6 +46,7 @@
 			<input type="text" id="rsvp_email" name="email" placeholder="Enter your email to RSVP" autocomplete="off" />
 			<input type="submit" />
 		</form>
+		<!-- <p class="madeby">made by <a href="https://twitter.com/uzzzoma" target="_blank">uzoma</a></p> -->
 	</footer>
 
 	<script>
@@ -105,7 +112,25 @@
 				$.post('https://yinka-bernie-emails.herokuapp.com/submit/'+email);
 				event.preventDefault();
 				$('footer').html('<h1>SEE YOU AT THE SHOW!</h1>');
-			})
+			});
+
+			var performers = ['Soulbacksheep', '234jaydaa', 'Solis', 'Aylø', 'Bris B', 'Ayüü', 'Barelyanyhook', 'Traplanta'];
+
+			$('#lineup').click(function(){
+
+				$('.main').css('display', 'none');
+
+				var j = 0;
+				var intervalID = window.setInterval(function(){
+					if(j < performers.length){
+						$('.performing').append("<p>" + performers[j] + "</p>");
+						j += 1;
+					} else {
+						window.clearInterval(intervalID);
+						$('.performing').append("<p id='refresh'>*refresh page to go back*</small>");
+					}
+				}, 1000);
+			});
 
 		});
 	</script>

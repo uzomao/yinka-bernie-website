@@ -9,6 +9,10 @@ body {
 	color: #fdf549;
 }
 
+a {
+	text-decoration: none;
+}
+
 header {
 	height: 50px;
 	margin: 10px;
@@ -19,7 +23,24 @@ header img{
 	float: left;
 }
 
-.main{
+#lineup {
+	text-align: center;
+	position: relative;
+	bottom: 50px;
+	z-index: 2;
+	letter-spacing: .1em;
+}
+
+#lineup a {
+	font-family: serif;
+	font-size: 20px;
+}
+
+#lineup a:hover {
+	text-decoration: underline solid #fdf549;
+}
+
+.main, .performing{
 	width: 100%;
     height: 192px;
 
@@ -36,7 +57,7 @@ header img{
 	float: right;
 	color: #fdf549;
 	font-size: 30px;
-	margin: .25em 1em 0 0;
+	margin: .5em 1em 0 0;
 	cursor: pointer;
 }
 
@@ -193,15 +214,62 @@ li:first-child {
 	animation-duration: 10s;
 }
 
+.performing p {
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	width: 30%;
+	margin: auto;
+}
+
+#refresh {
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	font-size: 12px;
+	text-transform: none;
+	margin-top: 1em;
+}
+
+.madeby {
+	text-align: right;
+}
+
+.madeby a{
+	text-decoration: underline;
+}
+
+.fa-users {
+	display: none;
+}
+
 @media screen and (max-device-width: 480px){
 
 	header img {
 		width: 35%;
 	}
 
-	.fa-volume-mute, .fa-volume-up {
+	.fa-users {
 		font-size: 100px;
-		margin-right: .25em;
+		margin-right: 0;
+	}
+
+	.lineup-on-desktop {
+		display: none;
+	}
+
+	.performing p {
+		font-size: 48px;
+		width: 90%;
+	}
+
+	.performing {
+		top: -300px;
+	}
+
+	.fa-volume-mute, .fa-volume-up, .fa-volume-mute::before{
+		display: none;
 	}
 
 	.lyrics {
@@ -237,5 +305,9 @@ li:first-child {
 	
 	input[type=submit]{
 		height: 100px;
+	}
+
+	#refresh {
+		font-size: 24px;
 	}
 }
