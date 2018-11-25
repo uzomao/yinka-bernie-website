@@ -341,4 +341,9 @@ li:first-child {
 	.see-you {
 		font-size: 50px;
 	}
+
+	.see-you-link {
+		margin-left: 0;
+		text-decoration: underline solid yellow;
+	}
 }

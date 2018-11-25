@@ -118,7 +118,7 @@
 				var email = $('#rsvp_email').val();
 				$.post('https://yinka-bernie-emails.herokuapp.com/submit/'+email);
 				event.preventDefault();
-				$('footer').html('<h1 class="see-you">SEE YOU AT THE SHOW! site by <a href="https://twitter.com/uzzzoma" target="_blank">uzoma</a></h1>');
+				$('footer').html('<h1 class="see-you">SEE YOU AT THE SHOW! site by <a class="see-you-link" href="https://twitter.com/uzzzoma" target="_blank">uzoma</a></h1>');
 			});
 
 			var performers = ['Soulbacksheep', '234jaydaa', 'Solis', 'Aylø', 'Bris B', 'Ayüü', 'Barelyanyhook', 'Traplanta'];
