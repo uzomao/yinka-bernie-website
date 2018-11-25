@@ -34,6 +34,7 @@ header img{
 #lineup a {
 	font-family: serif;
 	font-size: 20px;
+	text-decoration: underline;
 }
 
 #lineup a:hover {
@@ -244,19 +245,36 @@ li:first-child {
 	display: none;
 }
 
+.mobile-header {
+	display: none;
+}
+
 @media screen and (max-device-width: 480px){
 
-	header img {
-		width: 35%;
+	header{
+		display: none;
+	}
+
+	#lineup {
+		bottom: 0;
+		top: 50px;
+	}
+	
+	#lineup a {
+		font-size: 50px;
+	}
+
+	.mobile-header {
+		display: block;
+		text-align: center;
+		font-family: "Oswald", sans-serif;
+		font-size: 50px;
+		letter-spacing: .1em;
 	}
 
 	.fa-users {
 		font-size: 100px;
 		margin-right: 0;
-	}
-
-	.lineup-on-desktop {
-		display: none;
 	}
 
 	.performing p {
@@ -268,16 +286,13 @@ li:first-child {
 		top: -300px;
 	}
 
-	.fa-volume-mute, .fa-volume-up, .fa-volume-mute::before{
-		display: none;
-	}
-
 	.lyrics {
 		font-size: 30px;
 	}
 
 	input[type=text] {
-		width: 55%;
+		width: 90%;
+		margin-left: 5%;
 		font-size: 40px;
 	}
 
@@ -302,16 +317,28 @@ li:first-child {
 	footer>h1>a, .fa-envelope, input[type=submit] {
 		font-size: 50px;
 	}
+
+	footer>h1>a {
+		margin-left: 5%;
+	}
 	
 	input[type=submit]{
 		height: 100px;
+		float: right;
+		margin-right: 5%;
 	}
 
 	input {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 	}
 
 	#refresh {
 		font-size: 24px;
+	}
+
+	.see-you {
+		font-size: 50px;
 	}
 }

@@ -7,16 +7,25 @@
 	<link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 	<header>
 		<img src="logo.jpg" alt="Yinka Bernie Intimate Show Logo">
 		<i class="fas fa-volume-up" style="display: none"></i>
 		<i class="fas fa-volume-mute"></i>
-		<i id="lineup" class="fas fa-users"></i>
 	</header>
 
-	<p id="lineup" class="lineup-on-desktop"><a href="#" id="lineup_link">who'll be there?</a></p>
+	<h1 class="mobile-header">YINKA BERNIE INTIMATE SHOW</h1>
+	<p id="lineup">
+		<a href="#" id="lineup_link">who'll be there?</a>
+	</p>
 
 	<div class="main">
 		<p id="lyrics" class="lyrics"></p>
@@ -51,7 +60,6 @@
 
 	<script>
 		$(document).ready(function(){
-
 			
 			var lyrics = [
 				{text: "You don't call me no more, you don't text me no more", sound: 'music/again.mp3'},
@@ -101,8 +109,7 @@
 				$(this).css({
 					"display": "inline",
 					"float": "left",
-					"padding-left": "10px",
-					"transition": "all 2s ease-out"
+					"padding-left": "10px"
 				});
 				$('input').css('display', 'inline')
 			})
@@ -111,7 +118,7 @@
 				var email = $('#rsvp_email').val();
 				$.post('https://yinka-bernie-emails.herokuapp.com/submit/'+email);
 				event.preventDefault();
-				$('footer').html('<h1>SEE YOU AT THE SHOW!</h1>');
+				$('footer').html('<h1 class="see-you">SEE YOU AT THE SHOW! site by <a href="https://twitter.com/uzzzoma" target="_blank">uzoma</a></h1>');
 			});
 
 			var performers = ['Soulbacksheep', '234jaydaa', 'Solis', 'Aylø', 'Bris B', 'Ayüü', 'Barelyanyhook', 'Traplanta'];
