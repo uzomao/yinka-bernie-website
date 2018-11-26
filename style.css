@@ -104,6 +104,16 @@ footer > h1 > a:hover {
 	text-decoration: line-through;
 }
 
+footer small {
+	text-align: center;
+	font-size: 16px;
+} footer small a {
+	text-decoration: underline solid yellow;
+}
+
+footer p {
+	text-align: center;
+}
 input {
 	outline: none;
 	border: none;
@@ -314,12 +324,16 @@ li:first-child {
 		font-size: 24px;
 	}
 
-	footer>h1>a, .fa-envelope, input[type=submit] {
+	footer>h1, .fa-envelope, input[type=submit] {
 		font-size: 50px;
 	}
 
 	footer>h1>a {
 		margin-left: 5%;
+	}
+
+	footer small {
+		font-size: 40px;
 	}
 	
 	input[type=submit]{
